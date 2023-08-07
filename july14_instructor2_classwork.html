@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body{
+            display:flex;
+            justify-content: space-between;
+        }
+        .container{
+            display:flex;
+            
+        }
+        .left{
+            height:500px;
+            width:500px;
+            flex:1;
+            
+            display: flex;
+        }
+        .messagebox{
+            height:300px;
+            width:250px;
+            border:2px solid red;
+        }
+        .inputs{
+            height:300px;
+            width:300px;
+            border:1px solid blue;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            gap:20px;
+            align-items: center;
+        }
+        button{
+            width:50%;
+        }
+        .toastbox{
+            display:flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            flex:1;
+            align-items: flex-end;
+            
+        }
+        .toast{
+            height:50px;
+            width:150px;
+            border:1px solid black;
+            position:relative;
+            margin-top:5px;
+            border-radius: 5px;
+            padding:5px;
+            text-align: center;
+            word-wrap: break-word;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            
+        }
+        .cross{
+            display: block;
+            position: absolute;
+            top:2px;
+            right:4px;
+            background-color: aliceblue;
+            color:red;
+            cursor:pointer;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div class="container">
+        <div class="left">
+            <div class="messagebox">
+             <textarea id="messagebox" rows="19" cols="30"></textarea>
+
+            </div>
+            <div class="inputs">
+                <div>
+                Duration<input type="number" id="duration"><br>
+                <label>Cncellable</label><input type="checkbox" id="cancellable">
+                </div>
+                 <div>
+                <input type="radio" id="success" name="messagetype" value="success">
+                <label for="success">success</label>
+                <input type="radio" id="error" name="messagetype"  value="error">
+                <label for="error">error</label>
+                </div>
+                
+                <button id="addtoast">Add Toast</button><br>
+                <button id="removeall">Remove All Toast</button>
+                
+            </div>
+           
+        </div>
+        <div class="toastbox" id="toastbox">
+            <!--<div class="toast">this is message<span class="cross">X</span></div>
+            <div class="toast">this is message</div>
+            <div class="toast">this is message</div>-->
+
+
+        </div>
+    </div>
+    
+    <script src='july14_instructor2_classwork.js'></script>
+</body>
+
+</html>

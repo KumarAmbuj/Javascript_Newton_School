@@ -1,0 +1,105 @@
+// Task Manager
+
+var taskForm = document.getElementById("taskForm");
+
+var taskInput = document.getElementById("taskInput");
+
+var taskList = document.getElementById("taskList");
+
+var deleteButton = document.getElementsByClassName("deleteButton")
+
+// Retrieve tasks from Local Storage
+
+var tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+// Render tasks on page load
+
+renderTasks();
+
+// Add task
+
+taskForm.addEventListener("submit", function (e) {
+
+e.preventDefault();
+
+var taskText = taskInput.value.trim();
+
+if (taskText !== "") {
+
+var task = {
+
+id: Date.now(),
+
+text: taskText,
+
+};
+
+tasks.push(task);
+
+saveTasks();
+
+renderTask(task);
+
+taskInput.value = "";
+
+}
+
+});
+
+// Delete task
+
+deleteButton[0].addEventListener("click", async function (e) {
+
+// remove all taks from local storage
+
+console.log("delete button clicked");
+
+localStorage.removeItem("tasks");
+
+tasks = [];
+
+renderTasks();
+
+});
+
+// Save tasks to Local Storage
+
+function saveTasks() {
+
+localStorage.setItem("tasks", JSON.stringify(tasks));
+
+}
+
+// Render tasks on the page
+
+function renderTasks() {
+
+taskList.innerHTML = "";
+
+tasks.forEach(function (task) {
+
+renderTask(task);
+
+});
+
+}
+
+// Render single task
+
+function renderTask(task) {
+
+var li = document.createElement("li");
+
+li.dataset.id = task.id;
+
+li.textContent = task.text;
+
+// var deleteButton = document.createElement("button");
+
+// deleteButton.textContent = "Delete";
+
+// li.appendChild(deleteButton);
+
+taskList.appendChild(li);
+
+}

@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>instructor 2  classwork</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .container{
+            margin-top: 100px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        .task{
+            text-align: center;
+            height:400px;
+            width:700px;
+            border:2px solid black;
+            background-color: whitesmoke;
+        }
+        .input{
+            height:400px;
+            width:400px;
+            border:2px solid black;
+            background-color: whitesmoke;
+        }
+        .priority{
+            display:flex;
+            width:80%;
+            height:50px;
+            border:1px solid red;
+            padding:2px;
+            margin-top: 5px;
+            margin:auto;
+        }
+        .pbox{
+            padding:10px;
+            text-align: center;
+            width:50px;
+            border-right: 2px solid black;
+        }
+        #description{
+            margin: 50px;
+        }
+        .inputdiv{
+            display:flex;
+            justify-content: center;
+            margin-top: 100px;
+            
+        }
+        input{
+            padding:10px;
+            margin-right: 5px;
+        }
+        .priorityList{
+            display: flex;
+            gap:5px;
+            padding:5px;
+
+        }
+        .taskBox{
+            height:30px;
+            width:100px;
+            border:1px solid black;
+            background-color: azure;
+            color:black;
+            cursor:pointer;
+            border-radius: 10px;
+        }
+        .expand{
+            margin-left: 4px;
+            cursor:pointer;
+            margin-top: 4px;
+            border:none;
+            border-radius: 5px;
+            background-color:black;
+            color:whitesmoke;
+            padding:3px;
+
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="container">
+        <div class="task">
+            <h1>Priority List</h1>
+            <div class="priority" >
+                <div  class="pbox">P 1</div>
+                <div class="priorityList" id="p1"></div>
+            </div>
+
+            <div class="priority" >
+                <div  class="pbox">P 2</div>
+                <div class="priorityList" id="p2"></div>
+            </div>
+
+            <div class="priority" >
+                <div  class="pbox">P 3</div>
+                <div class="priorityList" id="p3"></div>
+            </div>
+
+            <div class="priority" id="unassigned">
+                <div id="p4" class="pbox">U A</div>
+                <div class="priorityList" id="assigned">
+                    <!--
+                    <div class="taskBox" id="1" draggable="true">grocery<button class="expand">exp</button></div>
+                    <div class="taskBox" id="2" draggable="true">grocery<button class="expand">exp</button></div>
+                    <div class="taskBox" id="3" draggable="true">grocery<button class="expand">exp</button></div>
+                    -->
+                </div>
+            </div>
+            
+
+
+        </div>
+        <div class="input">
+            <div class="inputdiv">
+            <input type="text" id="input" >
+            <button id="addtask" plcaholde="Enter task">Add Task</button><br>
+            </div>
+
+            <textarea id="description" rows="8" cols="40"></textarea>
+
+        </div>
+    </div>
+    
+    
+    <script src='july21_instructor2_classwork.js'></script>
+</body>
+
+</html>
