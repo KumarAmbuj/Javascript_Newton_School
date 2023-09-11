@@ -1,20 +1,25 @@
-//let a=20;
-//{
-//    let a=30;
-//    console.log(a);
-//}
-//console.log(a);
+Function.prototype.mybind = function (object, ...args1) {
+  const func = this;
+  return function () {
+    // func.mycall(object, ...args, ...arg2);
+    func.apply(object, [...args1]);
+  };
+};
 
-//let a=30;
-//function callme(){
-//    let a=40;
-//    console.log(a);
-//}
-//callme();
-//console.log(a);
+//Function.prototype.mybind = function (obj, ...args1) {
+//  obj.func = this;
+//  return (...args2) => {
+//    obj.func(...args1, ...args2);
+//  };
+//};
 
-const arr=[10 ,20];
-const arr2=['a',30];
-const random=[...arr,...arr2,10];
-console.log(random);
-console.log(...arr);
+const obj={
+  name:"ambuj",
+  age:"22",
+}
+
+function fun(){
+  console.log(this.name,this.age);
+}
+
+console.log(fun.mybind(obj)());

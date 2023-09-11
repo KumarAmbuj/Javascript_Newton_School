@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fetch api</title>
+    <style>
+      .container {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 4px;
+        justify-content: center;
+      }
+      .item {
+        height: 300px;
+        width: 220px;
+        border: 1px solid red;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        color: black;
+      }
+      .search {
+        display: flex;
+        justify-content: center;
+      }
+      .image {
+        height: 230px;
+        width: 150px;
+      }
+      .item img {
+        height: 100%;
+        width: 100%;
+      }
+      p {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="search">
+      <input type="text" id="search" /><button id="searchBtn">search</button>
+    </div>
+    <div class="container" id="container">
+      <!--
+      <div class="item">
+        <div class="image">
+          <img src="" />
+        </div>
+        <div>
+          <p>name</p>
+          <p>email</p>
+          <p>company</p>
+          <p>age</p>
+          <p>eye color</p>
+        </div>
+      </div>
+      -->
+    </div>
+    <script src="august22_fetch_api_example.js"></script>
+  </body>
+</html>

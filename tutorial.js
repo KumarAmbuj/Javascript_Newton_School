@@ -1,24 +1,11 @@
-
-console.log("dekh bhai aaj javascript padhenge");
-var fname="Ambuj";
-var lname="Shekhar";
-console.log(fname);
-console.log(fname,lname);
-console.log(typeof fname);
-
-var a="hello";
-console.log(a,typeof a);
-a=123;
-console.log(a,typeof a);
-
-console.log(window);
-console.log(window.a);
-
-b=30;
-console.log(window.b);
-
-var c=40.345;
-console.log(c,typeof c);
-
-console.log(typeof Infinity);
-console.log(typeof -Infinity);
+for (int x = 1; x <= N; x++) {
+  int maxg = 0;
+  for (int i = 0; i <= N - x; i++) {
+      int subg = Arr[i];
+      for (int j = i + 1; j < i + x; j++) {
+          subg = gcd(subg, Arr[j]);
+      }
+      maxg = Math.max(maxg, subg);
+  }
+  System.out.print(maxGCD + " ");
+}

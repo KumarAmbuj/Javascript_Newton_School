@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .parent {
+        margin: auto;
+        display: flex;
+        height: 300px;
+        width: 500px;
+        background-color: aliceblue;
+        justify-content: center;
+        align-items: center;
+      }
+      .child {
+        height: 40px;
+        width: 50px;
+        background-color: blue;
+        margin-left: 10px;
+      }
+      .result {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .data {
+        height: 100px;
+        width: 100px;
+        border: 1px solid black;
+      }
+      .data img {
+        height: 60px;
+        width: 60px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent" id="parent">
+      <div id="a" class="child"></div>
+      <div id="b" class="child"></div>
+      <div id="c" class="child"></div>
+      <div id="d" class="child"></div>
+    </div>
+
+    <div class="result" id="result">
+      <!--
+      <div class="data">
+        <img src="" />
+        <p></p>
+      </div>
+      -->
+    </div>
+    <script src="sept3.js"></script>
+  </body>
+</html>
