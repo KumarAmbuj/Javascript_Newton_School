@@ -1,6 +1,7 @@
-class Newton{
-    _countStudent=0;
+class Newton {
+  _countStudent = 0;
+  #count = 0;
 }
-const obj=new Newton();
-console.log(obj.countStudent );
-console.log(obj._countStudent );
+const obj = new Newton();
+console.log(obj.countStudent);
+console.log(obj._countStudent);

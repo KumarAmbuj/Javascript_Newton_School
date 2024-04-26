@@ -7,8 +7,6 @@
 // Object.getPrototypeOf(args1); // it will have one parameter, it will return the protoype for the parameter // getter
 // Object.setPrototypeOf(args1 , args2); // it will have two parameter where first is object where we need to set proto and second is protoype object
 
-
-
 const stud = {
   college: "Newton",
   city: "Remote",
@@ -24,6 +22,7 @@ Object.setPrototypeOf(stud1, stud);
 
 console.log("stud1", Object.getPrototypeOf(stud1));
 
-//console.log(Object.getPrototypeOf(stud));
-
+console.log(Object.getPrototypeOf(stud));
+console.log(stud1);
+console.log("stud prototype", Object.getPrototypeOf(stud));
 console.log(stud1.college);

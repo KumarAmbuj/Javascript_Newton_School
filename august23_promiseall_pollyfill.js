@@ -24,75 +24,36 @@ const p4 = new Promise(function (resolve, reject) {
   }, 3000);
 });
 
-/// myall
-//Promise.myall = function (promises) {
-//  // here promises params is the type of array
-//  const resultPromise = [];
-//  return new Promise((resolved, rejected) => {
-//    promises.forEach((promise, index) => {
-//      promise
-//        .then((result) => {
-//          // somewhere i need to store
-//          resultPromise.push(result);
-//          if (index === promises.length - 1) {
-//            resolved(resultPromise);
-//          }
-//        })
-//        .catch((error) => {
-//          rejected(error);
-//        });
-//      //else {
-//      //resultPromise.push(promise);
-//      //if (index === promises.length - 1) {
-//      //  resolved(resultPromise);
-//      //}
-//      //}
-//    });
-//  });
-//};
-//
-//const checker = Promise.myall([p1, p2, p3, p4]);
-//
-//checker
-//  .then((result) => {
-//    console.log("checker", result);
-//  })
-//  .catch((error) => {
-//    console.log(error);
-//  });
-//
-
-// for handling all edge cases
+// myall
 Promise.myall = function (promises) {
   // here promises params is the type of array
   const resultPromise = [];
   return new Promise((resolved, rejected) => {
     promises.forEach((promise, index) => {
-      if (typeof promise?.then == "function") {
-        promise
-          .then((result) => {
-            // somewhere i need to store
-            resultPromise.push(result);
-            if (index === promises.length - 1) {
-              resolved(resultPromise);
-            }
-          })
-          .catch((error) => {
-            rejected(error);
-          });
-      } else {
-        resultPromise.push(promise);
-        if (index === promises.length - 1) {
-          resolved(resultPromise);
-        }
-      }
+      promise
+        .then((result) => {
+          // somewhere i need to store
+          resultPromise.push(result);
+          if (index === promises.length - 1) {
+            resolved(resultPromise);
+          }
+        })
+        .catch((error) => {
+          rejected(error);
+        });
+      //else {
+      //resultPromise.push(promise);
+      //if (index === promises.length - 1) {
+      //  resolved(resultPromise);
+      //}
+      //}
     });
   });
 };
 
-const checker = Promise.myall([p1, p2, p3, p4]);
+const checker2 = Promise.myall([p1, p2, p3, p4]);
 
-checker
+checker2
   .then((result) => {
     console.log("checker", result);
   })
@@ -100,12 +61,50 @@ checker
     console.log(error);
   });
 
-const checker1 = Promise.myall([1, "two", "3", "ambuj"]);
+// for handling all edge cases
+// Promise.myall = function (promises) {
+//   // here promises params is the type of array
+//   const resultPromise = [];
+//   return new Promise((resolved, rejected) => {
+//     promises.forEach((promise, index) => {
+//       if (typeof promise?.then == "function") {
+//         promise
+//           .then((result) => {
+//             // somewhere i need to store
+//             resultPromise.push(result);
+//             if (index === promises.length - 1) {
+//               resolved(resultPromise);
+//             }
+//           })
+//           .catch((error) => {
+//             rejected(error);
+//           });
+//       } else {
+//         resultPromise.push(promise);
+//         if (index === promises.length - 1) {
+//           resolved(resultPromise);
+//         }
+//       }
+//     });
+//   });
+// };
 
-checker1
-  .then((result) => {
-    console.log("checker", result);
-  })
-  .catch((error) => {
-    console.log(error);
-  });
+// const checker = Promise.myall([p1, p2, p3, p4]);
+
+// checker
+//   .then((result) => {
+//     console.log("checker", result);
+//   })
+//   .catch((error) => {
+//     console.log(error);
+//   });
+
+// const checker1 = Promise.myall([1, "two", "3", "ambuj"]);
+
+// checker1
+//   .then((result) => {
+//     console.log("checker", result);
+//   })
+//   .catch((error) => {
+//     console.log(error);
+//   });

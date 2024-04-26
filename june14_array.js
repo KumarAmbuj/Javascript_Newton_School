@@ -31,7 +31,6 @@
 //const sss= data.join("/");
 //console.log(sss);
 
-
 const data2 = [1, 2, 3, 4, 5, 6];
 // in array if you did not given any value to given index js automatically set that index value to undefined
 // data2[10] = 10;
@@ -65,8 +64,7 @@ const data2 = [1, 2, 3, 4, 5, 6];
 //console.log("includes", data1234.includes("hello"));
 //console.log("includes", data1234.includes("hell1"));
 
-
-//const aa = [1, 2, 34];
+const aa = [1, 2, 34];
 //const bb = [3, 4, 5];
 //
 //const cc = aa.concat(bb);
@@ -77,7 +75,7 @@ const data2 = [1, 2, 3, 4, 5, 6];
 //
 //// toString
 //
-//console.log(aa.toString()); //  '34,2,1' join(',')
+console.log(aa.toString()); //  '34,2,1' join(',')
 //
 //const data123 = [1, 1, 1, 1, 12, 2, 2, 2, 2, 4, 5, 5, 5];
 //console.log(data123.lastIndexOf(1)); //  3
@@ -85,7 +83,6 @@ const data2 = [1, 2, 3, 4, 5, 6];
 //
 //console.log(data123.lastIndexOf(12)); //  4
 //console.log(data123.indexOf(12)); // 4
-
 
 //const arr=[1,2,3,'hey','chill',5 ,'relax'];
 //
@@ -105,9 +102,9 @@ const data2 = [1, 2, 3, 4, 5, 6];
 //dogs.length = 1;
 //console.log(dogs);
 //const ele= ["1", "2", "3", "4"];
-//let text = ele.toString(); 
+//let text = ele.toString();
 //console.log(text)
 
-var arr = [34, 234, 567, 4];  
-arr.push('jacob',true,23.45) ; 
-console.log(arr)
+var arr = [34, 234, 567, 4];
+arr.push("jacob", true, 23.45);
+console.log(arr);

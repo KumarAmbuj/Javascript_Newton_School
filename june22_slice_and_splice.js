@@ -1,4 +1,4 @@
-console.log('slice and splice');
+console.log("slice and splice");
 
 //const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 //
@@ -22,11 +22,11 @@ console.log('slice and splice');
 //
 //console.log("slice5", slice5); //
 
-//console.log('spile');
-//const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-//const ans1=nums.splice(2,4);
-//console.log(ans1);
-//console.log(nums);
+console.log("spile");
+const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const ans1 = nums.splice(2, 4);
+console.log(ans1);
+console.log(nums);
 //
 //
 //const nums1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -34,11 +34,10 @@ console.log('slice and splice');
 //const ans=nums1.splice(4,-2);
 //console.log(ans);
 //
-//const nums3=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-//const ans3=nums3.splice(-8,3);
-//console.log(ans3);
-//console.log(nums3);
-
+const nums3 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const ans3 = nums3.splice(-8, 3);
+console.log(ans3);
+console.log(nums3);
 
 //const rank = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 //
@@ -75,22 +74,20 @@ console.log('slice and splice');
 //console.log(updatedList); // [8, 11]
 //console.log(animalsCount); // [4, 5, 6, 7, 'hello', 'hey', 'tit', 'tot', 'lol', 2, 3, 5]
 
-
-
 //const myEmployee = [
 //
 //    { name: "Vishal", salary: 20000 },
-//    
+//
 //    { name: "tiro", salary: 100000 },
-//    
+//
 //    { name: "verr", salary: 30000 },
-//    
+//
 //    { name: "tom", salary: 200000 },
-//    
+//
 //    { name: "rim", salary: 10000 },
-//    
+//
 //    { name: "chim", salary: 30000 },
-//    
+//
 //    ];
 //
 //const myfunc=(a,b)=>{
@@ -104,25 +101,22 @@ console.log('slice and splice');
 //myArr[2];
 //console.log('2' in myArr);
 
-
-let user = {"name":"Karan",
-"address":{"personal":"Delhi",
-"area":"CivilLines"},
-"office":{"state":"Mumbai",
-"area":{"landmark":"Bandra"}}}
-let resultObj={};
-function findflat(user,obj){
-    if(typeof obj!='object'){
-        resultObj[user]=obj;
+let user = {
+  name: "Karan",
+  address: { personal: "Delhi", area: "CivilLines" },
+  office: { state: "Mumbai", area: { landmark: "Bandra" } },
+};
+let resultObj = {};
+function findflat(user, obj) {
+  if (typeof obj != "object") {
+    resultObj[user] = obj;
+  } else {
+    for (var x in obj) {
+      findflat(user + "_" + x, obj[x]);
     }
-    else{
-        for(var x in obj){
-            findflat(user+"_"+x,obj[x]);
-        }
-    }
-
+  }
 }
-findflat('user',user);
+findflat("user", user);
 console.log(resultObj);
 //Output:
 //{

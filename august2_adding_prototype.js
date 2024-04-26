@@ -2,7 +2,7 @@ const array = [1234];
 const array1 = [1234, 12];
 // we are adding property to the Array prototype
 Array.prototype.printWithMessage = function () {
-  console.log("Hey I am print with message");
+  console.log("Hey I am print, with message");
 };
 array.printWithMessage();
 const a = [];

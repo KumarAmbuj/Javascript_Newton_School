@@ -34,10 +34,10 @@ var employee = {
   },
 };
 
-//const fullName = employee.printName();
-//console.log(fullName);
-//const fullName2 = employee.printNameWithArrow();
-//console.log(fullName2);
+const fullName = employee.printName();
+console.log("aa", fullName);
+const fullName2 = employee.printNameWithArrow();
+console.log(fullName2);
 
 // Scope of let and const are block
 // Scope of var are function scope
@@ -62,6 +62,5 @@ var employee = {
 //callme11234();
 //// console.log(lastName); //Sharma
 
-
-var a=30;
-console.log(window.a);
+let a = 30;
+console.log("aaaa", window.a);

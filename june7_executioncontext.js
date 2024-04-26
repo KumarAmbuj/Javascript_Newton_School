@@ -16,12 +16,26 @@
 //let result = call(10, 20, 30);
 //
 //console.log(result);
-var x=10;
-function test(){
-    if(x>5){
-        let x=30;
-    }
-    console.log(x);
+var x = 10;
+function test() {
+  if (x > 5) {
+    let x = 30;
+  }
+  console.log(x);
 }
 test();
 
+console.log("helooo");
+
+let promise = new Promise((resolve, reject) => {
+  console.log("inside promise");
+  resolve("resolved");
+});
+
+console.log("outside promise");
+
+promise.then((res) => {
+  console.log(res);
+});
+
+console.log("after resolved");

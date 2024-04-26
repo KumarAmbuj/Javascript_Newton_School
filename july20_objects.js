@@ -1,4 +1,4 @@
-console.log('hello');
+console.log("hello");
 
 //const student={
 //    fname:"Ambuj",
@@ -27,7 +27,6 @@ console.log('hello');
 //
 //console.log(student);
 
-
 //shorthand property
 
 //let fname="Ambuj";
@@ -37,7 +36,6 @@ console.log('hello');
 //
 //console.log(obj);
 
-
 //const student1={
 //    const:40,
 //    let:"50",
@@ -46,19 +44,22 @@ console.log('hello');
 //console.log(student1);
 
 // creating function inside object
-const employee={
-    firstNmae:"Chim",
-    lastName:"Rim",
-    getFullName:function(){
-        return this.firstNmae+" "+this.lastName;
-    },
-    salary:300000,
-    increment:30,
-    getIncrementSalary:function(){
-        console.log(this);
-        return (this.salary*this.increment)/100+this.salary;
-    },
-}
+const employee = {
+  firstNmae: "Chim",
+  lastName: "Rim",
+  getFullName: function () {
+    return this.firstNmae + " " + this.lastName;
+  },
+  salary: 300000,
+  increment: 30,
+  getIncrementSalary: function () {
+    console.log(this);
+    return (this.salary * this.increment) / 100 + this.salary;
+  },
+};
 
 console.log(employee.getFullName());
 console.log(employee.getIncrementSalary());
+
+//const fun = employee.getFullName;
+//console.log(fun());

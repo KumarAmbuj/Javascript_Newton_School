@@ -1,5 +1,5 @@
 const promise = new Promise((resolve, reject) => {
-  if (2 === 2) {
+  if (2 == 2) {
     resolve("Success");
     console.log("heyyyyyy");
   } else {

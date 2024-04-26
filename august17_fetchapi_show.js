@@ -1,5 +1,5 @@
 const displayProduct = (productList) => {
-  console.log(productList);
+  //console.log(productList);
   const container = document.getElementById("container");
   productList?.map((product) => {
     const div = document.createElement("div");
@@ -23,11 +23,14 @@ const getAllProducts = () => {
 
     //console.log("before json()", res);
     return res.json().then((response) => {
-      console.log("response", response);
-      console.log("after response", response);
+      //console.log("response", response);
+      //console.log("after response", response);
       displayProduct(response?.products); // here response.products is list of product array
     });
   });
 };
 
 getAllProducts();
+
+const promise1 = new Promise();
+console.log(promise1);

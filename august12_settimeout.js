@@ -10,16 +10,15 @@
 //setTimeout(callbackFunc, waitingTime);
 //
 //console.log("code after setTimeOut");
-function fun(){
-    console.log("hello after some time");
+function fun() {
+  console.log("hello after some time");
 }
 
-function mytimeout(callback,time){
-    const t= Date.now();
-    while(Date.now()<t+time){
-
-    }
-    callback();
+function mytimeout(callback, time) {
+  const t = Date.now();
+  while (Date.now() < t + time) {}
+  callback();
 }
 
-mytimeout(fun,5000);
+mytimeout(fun, 5000);
+console.log("hiii");

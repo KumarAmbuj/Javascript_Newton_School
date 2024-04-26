@@ -27,7 +27,7 @@ const pr5 = new Promise((resolved, rejected) => {
     rejected("pr4 rejected");
   }, 5000);
 });
-const promise = Promise.allSettled([pr1, pr2, pr3, pr4, pr5]);
+const promise = Promise.allSettled([pr1, pr2, pr3, pr4]);
 
 promise
   .then((result) => {

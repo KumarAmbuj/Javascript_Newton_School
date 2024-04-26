@@ -14,3 +14,4 @@ const vehicle={
 console.log(vehicle.getTyre);
 vehicle.setTyre=8;
 console.log(vehicle.getTyre);
+console.log(vehicle['getTyre'])

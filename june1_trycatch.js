@@ -1,4 +1,4 @@
-console.log('try catch');
+console.log("try catch");
 
 var newton = {};
 var userDetail = {
@@ -47,7 +47,7 @@ const object = {
   b: 2,
   c: 3,
 };
-console.log(object.length);
+console.log("a", object.length);
 
 const array = [1, 2, 3, 4];
 
